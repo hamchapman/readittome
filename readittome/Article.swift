@@ -21,8 +21,3 @@ class Article: Object {
         return "id"
     }
 }
-
-enum PocketReadStatus {
-    case Unread
-    case Read
-}
