@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
+    func setCorrectRootViewController() {
+        var rootViewController:UIViewController!
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let pocketAccessToken = defaults.stringForKey("pocketAccessToken") {
+            rootViewController = storyboard.instantiateViewControllerWithIdentifier("oauthedController") as! UIViewController
+        } else {
+            rootViewController = storyboard.instantiateViewControllerWithIdentifier("pocketAuthModalController") as! UIViewController
+        }
+        self.window!.rootViewController = rootViewController
+        self.window!.makeKeyAndVisible()
 
+        
+    }
     
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
         switch url.host! {
@@ -25,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
 
         // Set default Realm Database
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String

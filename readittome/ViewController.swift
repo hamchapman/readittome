@@ -7,29 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
     
-    override func viewDidAppear(animated: Bool) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if defaults.stringForKey("pocketAccessToken") == nil {
-            performSegueWithIdentifier("PocketAuthModalSegue", sender: self)
-        } else {
-            // fetchNewArticles()
-            ArticleManager.fetchArticlesFromPocket()
-        }
+    override func viewWillAppear(animated: Bool) {
+        ArticleManager.fetchArticlesFromPocket()
+        println("fetching")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        println("I have a access token")
+        
+        let articles = Realm().objects(Article)
+        
+        println(articles.count)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

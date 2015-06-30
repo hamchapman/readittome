@@ -16,6 +16,8 @@ class PocketAuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println("I dont have a token")
 
         // Do any additional setup after loading the view.
     }
