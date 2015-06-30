@@ -26,6 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Set default Realm Database
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        let realmPath = documentsPath + "/articles.realm"
+        Realm.defaultPath = realmPath
+        
+        setCorrectRootViewController()
+    
+        
         return true
     }
 
