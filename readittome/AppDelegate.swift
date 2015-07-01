@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let pocketAccessToken = defaults.stringForKey("pocketAccessToken") {
             rootViewController = storyboard.instantiateViewControllerWithIdentifier("oauthedController") as! UIViewController
         } else {
-            rootViewController = storyboard.instantiateViewControllerWithIdentifier("pocketAuthModalController") as! UIViewController
+            rootViewController = storyboard.instantiateViewControllerWithIdentifier("pocketAuthModalController") as! PocketAuthViewController
         }
         self.window!.rootViewController = rootViewController
         self.window!.makeKeyAndVisible()
@@ -37,6 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         switch url.host! {
         case "pocket":
             authPocketWithUrl(url)
+            let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let oauthedController = storyboard.instantiateViewControllerWithIdentifier("oauthedController") as! UIViewController
+            self.window!.rootViewController = oauthedController
+            self.window!.makeKeyAndVisible()
+
         default:
             return false
         }

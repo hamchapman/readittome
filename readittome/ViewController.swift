@@ -12,7 +12,7 @@ import RealmSwift
 class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
-        ArticleManager.fetchArticlesFromPocket()
+//        ArticleManager.fetchArticlesFromPocket()
         println("fetching")
     }
     
