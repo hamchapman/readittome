@@ -6,43 +6,43 @@
 	<dict>
 		<key>Pods-Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Realm.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-RealmSwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2B485F23420765FD464D62A1</key>
+		<key>269A34A05670AB08290634D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C9EB6D79E0C1531EA6A152C</key>
+		<key>5E7913035531B565C7F7B46D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EA4D36779A09A8B073D3C0C</key>
+		<key>D601F1C0140F178EF327322A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E3A19776B69F887D718C16D</key>
+		<key>F9D87FACCF95DF84C4444C79</key>
 		<dict>
 			<key>primary</key>
 			<true/>

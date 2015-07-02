@@ -17,6 +17,7 @@ let pocketAccessToken = defaults.stringForKey("pocketAccessToken")!
 class ArticleManager {
     
     class func fetchArticlesFromPocket() {
+        println("fetching")
         let parameters = [
             "sort": "newest",
             "consumer_key": pocketConsumerKey,
@@ -34,10 +35,6 @@ class ArticleManager {
     class func saveArticles(articleList: [String:AnyObject]) {
         let realm = Realm()
         
-        realm.write {
-            realm.deleteAll()
-        }
-        
         for (id, articleHash) in articleList {
             let article = Article()
             
@@ -46,10 +43,11 @@ class ArticleManager {
             article.status = (articleHash["status"] as! String).toInt()!
             article.excerpt = articleHash["excerpt"] as! String
             article.id = id.toInt()!
-            
+             
             realm.write {
-                realm.add(article)
+                realm.add(article, update: true)
             }
+            println("stored \(id)")
         }
     }
     

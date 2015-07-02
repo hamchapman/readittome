@@ -10,7 +10,6 @@
 		331946B11B431E9000C30AC9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331946B01B431E9000C30AC9 /* Article.swift */; };
 		331946B51B43201100C30AC9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 331946B41B43201100C30AC9 /* Podfile */; };
 		331C885F1B43100200BC6801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C885E1B43100200BC6801 /* AppDelegate.swift */; };
-		331C88611B43100200BC6801 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C88601B43100200BC6801 /* ViewController.swift */; };
 		331C88641B43100200BC6801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331C88621B43100200BC6801 /* Main.storyboard */; };
 		331C88661B43100200BC6801 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331C88651B43100200BC6801 /* Images.xcassets */; };
 		331C88691B43100200BC6801 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331C88671B43100200BC6801 /* LaunchScreen.xib */; };
@@ -18,6 +17,8 @@
 		331C88831B43118600BC6801 /* PocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C88821B43118600BC6801 /* PocketUtils.swift */; };
 		331C88881B4316AB00BC6801 /* PocketAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C88871B4316AB00BC6801 /* PocketAuthViewController.swift */; };
 		331C888A1B431A1F00BC6801 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C88891B431A1F00BC6801 /* ArticleManager.swift */; };
+		3E2FA7E31B44A52E0060C363 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2FA7E21B44A52E0060C363 /* ArticlesViewController.swift */; };
+		3E2FA7E51B44A5780060C363 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2FA7E41B44A5780060C363 /* MainNavigationViewController.swift */; };
 		EC53BAC2A21DBAF1B9BDFC79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F060AB166D14CF327E6802C5 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -37,7 +38,6 @@
 		331C88591B43100200BC6801 /* readittome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = readittome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		331C885D1B43100200BC6801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		331C885E1B43100200BC6801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		331C88601B43100200BC6801 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		331C88631B43100200BC6801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		331C88651B43100200BC6801 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		331C88681B43100200BC6801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		331C88821B43118600BC6801 /* PocketUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketUtils.swift; sourceTree = "<group>"; };
 		331C88871B4316AB00BC6801 /* PocketAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketAuthViewController.swift; sourceTree = "<group>"; };
 		331C88891B431A1F00BC6801 /* ArticleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
+		3E2FA7E21B44A52E0060C363 /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		3E2FA7E41B44A5780060C363 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		9B93C7F3BD2DC106A760635A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F060AB166D14CF327E6802C5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F142AECB77FEFE0433923D45 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				331C885E1B43100200BC6801 /* AppDelegate.swift */,
-				331C88601B43100200BC6801 /* ViewController.swift */,
 				331C88621B43100200BC6801 /* Main.storyboard */,
+				3E2FA7E41B44A5780060C363 /* MainNavigationViewController.swift */,
 				331C88651B43100200BC6801 /* Images.xcassets */,
 				331C88671B43100200BC6801 /* LaunchScreen.xib */,
 				331C885C1B43100200BC6801 /* Supporting Files */,
@@ -105,6 +107,7 @@
 				331C88891B431A1F00BC6801 /* ArticleManager.swift */,
 				331946B01B431E9000C30AC9 /* Article.swift */,
 				331946B41B43201100C30AC9 /* Podfile */,
+				3E2FA7E21B44A52E0060C363 /* ArticlesViewController.swift */,
 			);
 			path = readittome;
 			sourceTree = "<group>";
@@ -307,8 +310,9 @@
 				331C88881B4316AB00BC6801 /* PocketAuthViewController.swift in Sources */,
 				331C888A1B431A1F00BC6801 /* ArticleManager.swift in Sources */,
 				331946B11B431E9000C30AC9 /* Article.swift in Sources */,
+				3E2FA7E31B44A52E0060C363 /* ArticlesViewController.swift in Sources */,
 				331C88831B43118600BC6801 /* PocketUtils.swift in Sources */,
-				331C88611B43100200BC6801 /* ViewController.swift in Sources */,
+				3E2FA7E51B44A5780060C363 /* MainNavigationViewController.swift in Sources */,
 				331C885F1B43100200BC6801 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,10 +444,6 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = readittome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -458,10 +458,6 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = readittome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

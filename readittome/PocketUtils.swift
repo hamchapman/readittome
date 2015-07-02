@@ -13,7 +13,6 @@ import Alamofire
 let pocketConsumerKey = "42523-e96ad3f09e1a0796bdbe05a8"
 let pocketRedirectUri = "readitome-login://pocket"
 var pocketRequestCode = ""
-var pocketAuthenticated = false
 
 
 
@@ -38,7 +37,7 @@ func authPocket() {
 }
 
 
-func authPocketWithUrl(url: NSURL) {
+func authPocketWithUrl(url: NSURL, callback: () -> Void) {
     
     let parameters = [
         "consumer_key": pocketConsumerKey,
@@ -53,8 +52,9 @@ func authPocketWithUrl(url: NSURL) {
         
         let pocketAccessToken = params[0].componentsSeparatedByString("=")[1]
         
-        pocketAuthenticated = true
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(pocketAccessToken, forKey: "pocketAccessToken")
+        println("stored, calling the callback yo")
+        callback()
     }
 }
